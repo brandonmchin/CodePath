@@ -1,6 +1,6 @@
-# Pre-work - *Tip Calculator in PHP*
+# Pre-work - *Tip Calculator*
 
-**Tip Calculator in PHP** is a tip calculator PHP page.
+**Tip Calculator** is a tip calculator PHP page.
 
 Submitted by: **Brandon Chin**
 
@@ -30,13 +30,24 @@ Here's a walkthrough of implemented user stories:
 
 ![video walkthrough](https://github.com/brandonmchin/CodePath/blob/master/tip_calculator_demo.gif "Video Walkthrough")
 
-[//]: <> <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+ <!-- 
+ <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+ -->
 
 GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+In developing the application, I learned a few things and ran into some occasional challenges. 
+
+Some of which include retaining the submitted values when returning to the page after the form has been submitted.  
+I handled this by using PHP to populate the values by the session variables if they were set.  
+That way, when the user submits a value to the form, the value is stored in the session variable, which is then assigned to the inputs.
+
+Another challenge I encountered was indicating the appropriate form errors.  I did this by using a type of error flagging,
+which means I have a session variable for the error and I use an integer value to indicate the type of error that was found.
+For example, error is iniitally set to 0, meaning no error, and if the form is submitted without a value in the subtotal textbox,
+error is set to -1.  Now, when we return to the page, the value of error is checked, and the appropriate responses are performed. 
 
 ## License
 
