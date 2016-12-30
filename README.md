@@ -1,20 +1,20 @@
 # Pre-work - *Tip Calculator in PHP*
 
-**Name of your app** is a tip calculator PHP page.
+**Tip Calculator in PHP** is a tip calculator PHP page.
 
-Submitted by: **Your Name Here**
+Submitted by: **Brandon Chin**
 
-Time spent: **X** hours spent in total
+Time spent: **12** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is complete:
-* [ ] User can enter a bill amount, choose a tip percentage, and submit the form to see the tip and total values.
-* [ ] Tip percentage choices use a PHP loop to output three radio buttons.
-* [ ] PHP code sets reasonable default values for the form.
-* [ ] PHP code confirms the presence and correct format of submitted values.
-* [ ] Page indicates any form errors which need to be fixed.
-* [ ] Submitted form values are retained when errors or results are shown.
+* [x] User can enter a bill amount, choose a tip percentage, and submit the form to see the tip and total values.
+* [x] Tip percentage choices use a PHP loop to output three radio buttons.
+* [x] PHP code sets reasonable default values for the form.
+* [x] PHP code confirms the presence and correct format of submitted values.
+* [x] Page indicates any form errors which need to be fixed.
+* [x] Submitted form values are retained when errors or results are shown.
 
 The following **optional** features are implemented:
 * [ ] Add support for custom tip percentage
@@ -28,9 +28,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![alt text](http://imgur.com/srDpVKE "Video Walkthrough")
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+<img src='http://imgur.com/srDpVKE' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/).
 
 ## Notes
 
