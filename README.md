@@ -28,9 +28,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![alt text](http://imgur.com/srDpVKE "Video Walkthrough")
+![alt text](https://github.com/brandonmchin/CodePath/tip_calculator_demo.gif "Video Walkthrough")
 
-<img src='http://imgur.com/srDpVKE' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+[comment] <> <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/).
 
