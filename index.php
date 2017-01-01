@@ -14,23 +14,38 @@
 
             <form action = "tip_calculator.php" method = "post">
                 <div id="bill_subtotal_input">Bill Subtotal: $ 
-                    <input id="text_input" type="text" 
-                        name="bill_subtotal" 
-                        style="background-color: <?php if(($_SESSION['error']==-1)||($_SESSION['error']==-3)){echo '#ffe4e1';}?>"
+                    <input type="text" name="bill_subtotal" 
+                        style="background-color: <?php if(($_SESSION['error']==-1)){echo '#ffe4e1';}?>"
                         value="<?php if(isset($_SESSION['bill_subtotal'])){echo htmlentities($_SESSION['bill_subtotal']);} ?>" 
                     />
                 </div>
+
+                <div>Tip Percentage: </div>
                 
-                <div id="tip_radio_buttons">Tip Percentage:
-                    <input type="radio" name="percentage" 
-                        <?php if(isset($_SESSION['percentage']) && $_SESSION['percentage']=='10%'){echo 'checked';} ?> value="10%" />
-                        <label style="color: <?php if(($_SESSION['error']==-2)||($_SESSION['error']==-3)){echo '#ff0000';}?>">10%</label>
-                    <input type="radio" name="percentage" 
-                        <?php if(isset($_SESSION['percentage']) && $_SESSION['percentage']=='15%'){echo 'checked';} ?> value="15%" />
-                        <label style="color: <?php if(($_SESSION['error']==-2)||($_SESSION['error']==-3)){echo '#ff0000';}?>">15%</label>
-                    <input type="radio" name="percentage" 
-                        <?php if(isset($_SESSION['percentage']) && $_SESSION['percentage']=='20%'){echo 'checked';} ?> value="20%" />
-                        <label style="color: <?php if(($_SESSION['error']==-2)||($_SESSION['error']==-3)){echo '#ff0000';}?>">20%</label>
+                <div id="tip_radio_buttons">
+                    <?php
+                        for($tip_per=10; $tip_per<=20; $tip_per+=5)
+                        {
+                            $tip_per .= "%";
+
+                            echo '<input type="radio" name="percentage"';
+
+                            if(isset($_SESSION["percentage"]) && $_SESSION["percentage"]==$tip_per)
+                                echo 'checked="checked"';
+
+                            if($tip_per=="10%")     // set default percentage
+                                echo 'value=' . $tip_per . ' checked="checked" />';
+                            else
+                                echo 'value=' . $tip_per . ' />';
+
+                            echo '<label>' . $tip_per . '</label>';
+                        }
+                    ?>
+
+                    <!-- <input type="radio" name="percentage" 
+                        <?php if(isset($_SESSION['percentage']) && isset($_SESSION['custom_percentage'])){echo 'checked';} ?> value="" />
+                        <label>Custom: <input id="custom_input" type="text" name="custom_percentage" /> % </label>
+                    -->
                 </div>
                 
                 <div style="text-align: center;"><input type="submit" value="Submit" /></div>

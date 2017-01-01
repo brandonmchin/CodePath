@@ -6,25 +6,33 @@
 	////////////////////////////////////////////////////////////////////////////////////////////
 	// ERROR CHECK
 
-	$_SESSION['bill_subtotal'] = htmlspecialchars($_POST['bill_subtotal']);
+	if(isset($_POST['bill_subtotal']))
+	{
+		$_SESSION['bill_subtotal'] = htmlspecialchars($_POST['bill_subtotal']);
 
-	if((!is_numeric($_SESSION['bill_subtotal'])) || ($_SESSION['bill_subtotal'] <= 0))
-	{	
-		$_SESSION['error'] = -1;
-		$_SESSION['bill_subtotal'] = 0;
+		if((!is_numeric($_SESSION['bill_subtotal'])) || ($_SESSION['bill_subtotal'] <= 0))
+		{	
+			$_SESSION['error'] = -1;
+			$_SESSION['bill_subtotal'] = 0;
+		}
 	}
 
 	if(isset($_POST['percentage']))
 	{
 		$_SESSION['percentage'] = $_POST['percentage'];
 	}
-	else
-		$_SESSION['error'] = -2;
-
-	if(($_SESSION['bill_subtotal'] == 0) && (!isset($_SESSION['percentage'])))
+	else if(isset($_POST['custom_percentage']))
 	{
-		$_SESSION['error'] = -3;
+		$_SESSION['custom_percentage'] = $_POST['custom_percentage'];
+		$_SESSION['percentage'] = $_SESSION['custom_percentage'];
 	}
+	// else
+	// 	$_SESSION['error'] = -2;
+
+	// if(($_SESSION['bill_subtotal'] == 0) && (!isset($_SESSION['percentage'])))
+	// {
+	// 	$_SESSION['error'] = -3;
+	// }
 
 	/////////////////////////////////////////////////////////////////////////////////////////////
 	// PROCESS

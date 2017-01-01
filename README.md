@@ -10,7 +10,7 @@ Time spent: **12** hours spent in total
 
 The following **required** functionality is complete:
 * [x] User can enter a bill amount, choose a tip percentage, and submit the form to see the tip and total values.
-* [ ] Tip percentage choices use a PHP loop to output three radio buttons.
+* [x] Tip percentage choices use a PHP loop to output three radio buttons.
 * [x] PHP code sets reasonable default values for the form.
 * [x] PHP code confirms the presence and correct format of submitted values.
 * [x] Page indicates any form errors which need to be fixed.
@@ -30,7 +30,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![video walkthrough](https://github.com/brandonmchin/CodePath/blob/master/tip_calculator_demo.gif "Video Walkthrough")
+![video walkthrough](https://github.com/brandonmchin/CodePath/blob/master/tip_calculator_demo.mp4 "Video Walkthrough")
 
  <!-- 
  <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
@@ -44,7 +44,7 @@ I learned a few things working on this application and ran into some occasional 
 
 Some of which include retaining the submitted values when returning to the page after the form has been submitted.  I handled this by using PHP to populate the values with session variables if they were set.  That way, when the user submits a value to the form, the value is stored in a session variable, which is then assigned to the inputs.
 
-Another challenge I encountered was indicating the appropriate form errors.  I did this by using a type of error flagging, which involves having a session variable for the error and using an integer value to indicate the type of error that was found.  For example, the error variable is iniitally set to 0, meaning no error, and if the form is submitted without a value in the subtotal textbox, error is set to -1.  Now, when we return to the page, the value of error is checked, and the appropriate responses are performed. 
+Another challenge I encountered was indicating the appropriate form errors.  I did this by using a type of error flagging, which involves having a session variable for the error and using an integer value to indicate the type of error that was found.  For example, the error variable is initially set to 0, meaning no error, and if the form is submitted without a value in the subtotal textbox, error is set to -1.  Now, when we return to the page, the value of error is checked, and the appropriate responses are performed. 
 
 ## License
 
