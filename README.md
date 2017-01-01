@@ -4,7 +4,7 @@
 
 Submitted by: **Brandon Chin**
 
-Time spent: **12** hours spent in total
+Time spent: **14** hours spent in total
 
 ## User Stories
 
@@ -30,7 +30,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![video walkthrough](https://github.com/brandonmchin/CodePath/blob/master/tip_calculator_demo.mp4 "Video Walkthrough")
+![video walkthrough](https://github.com/brandonmchin/CodePath/blob/master/tip_calculator_demo.gif "Video Walkthrough")
 
  <!-- 
  <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
