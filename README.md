@@ -36,6 +36,7 @@ Here's a walkthrough of implemented user stories:
  -->
 
 GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/).
+
 Background image from Mass Effect concept art.
 
 ## Notes
