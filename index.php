@@ -13,14 +13,14 @@
             <div id="title">Tip Calculator</div>
 
             <form action = "tip_calculator.php" method = "post">
-                <div id="bill_subtotal_input">Bill Subtotal: $ 
+                <div id="bill_subtotal_input">Bill subtotal: $ 
                     <input type="text" name="bill_subtotal" 
-                        style="background-color: <?php if(($_SESSION['error']==-1)){echo '#ffe4e1';}?>"
-                        value="<?php if(isset($_SESSION['bill_subtotal'])){echo htmlentities($_SESSION['bill_subtotal']);} ?>" 
+                        style="background-color: <?php if(($_SESSION['error']==-1)||($_SESSION['error']==-4)){echo '#ffe4e1';}?>"
+                        value="<?php if(isset($_SESSION['bill_subtotal'])) echo htmlentities($_SESSION['bill_subtotal']); ?>" 
                     />
                 </div>
 
-                <div>Tip Percentage: </div>
+                <div>Tip percentage: </div>
                 
                 <div id="tip_radio_buttons">
                     <?php
@@ -42,15 +42,26 @@
                         }
                     ?>
 
-                    <!-- <input type="radio" name="percentage" 
+                    <!--
+                    <input type="radio" name="percentage" 
                         <?php if(isset($_SESSION['percentage']) && isset($_SESSION['custom_percentage'])){echo 'checked';} ?> value="" />
                         <label>Custom: <input id="custom_input" type="text" name="custom_percentage" /> % </label>
                     -->
+                    
+                </div>
+
+                <div id="split_input">Split: 
+                    <input type="text" name="num_persons"
+                        style="background-color: <?php if(($_SESSION['error']==-3)||($_SESSION['error']==-4)){echo '#ffe4e1';}?>"
+                        value="<?php if(isset($_SESSION['num_persons'])) echo htmlentities($_SESSION['num_persons']); else echo 1; ?>"
+                    />
+                    person(s)
                 </div>
                 
                 <div style="text-align: center;"><input type="submit" value="Submit" /></div>
             </form>
-            <div id="output_container" style="display: <?php if(isset($_SESSION['output'])) echo 'block'; else echo 'none'; ?>">
+            <div id="output_container">
+            <!-- <div id="output_container" style="display: <?php if(isset($_SESSION['output'])) echo 'block'; else echo 'none'; ?>"> -->
                 <?php
                     if($_SESSION['error'] == 0)
                         echo $_SESSION["output"];

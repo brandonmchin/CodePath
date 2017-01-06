@@ -40,6 +40,14 @@
     width: 80px;
 }
 
+#split_input {
+    margin-bottom: 40px;
+}
+
+#split_input input {
+    width: 60px;
+}
+
 #output_container {
     text-align: center;
     margin: 40px 5px;

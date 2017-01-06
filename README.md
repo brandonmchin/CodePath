@@ -1,10 +1,10 @@
-# Pre-work - *Tip Calculator*
+# CodePath - Pre-work Tip Calculator
 
 **Tip Calculator** is a tip calculator PHP page.
 
 Submitted by: **Brandon Chin**
 
-Time spent: **14** hours spent in total
+Time spent: **15** hours spent in total
 
 ## User Stories
 
@@ -18,7 +18,7 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 * [ ] Add support for custom tip percentage
-* [ ] Add support for splitting the tip and total
+* [x] Add support for splitting the tip and total
 
 <!--
 The following **additional** features are implemented:
@@ -48,7 +48,7 @@ Another challenge I encountered was indicating the appropriate form errors.  I d
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2017 Brandon Chin
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
