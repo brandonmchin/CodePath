@@ -1,10 +1,11 @@
 # CodePath - Pre-work Tip Calculator
 
-**Tip Calculator** is a tip calculator PHP page.
+**Tip Calculator** is a PHP page which calculates the bill total after accounting for tip and various other parameters.
+The project is designed as a pre-work assignment for the upcoming Spring 2017 CodePath web security course.
 
 Submitted by: **Brandon Chin**
 
-Time spent: **15** hours spent in total
+Time spent: **16** hours spent in total
 
 ## User Stories
 
@@ -17,7 +18,7 @@ The following **required** functionality is complete:
 * [x] Submitted form values are retained when errors or results are shown.
 
 The following **optional** features are implemented:
-* [ ] Add support for custom tip percentage
+* [x] Add support for custom tip percentage
 * [x] Add support for splitting the tip and total
 
 <!--
@@ -44,7 +45,7 @@ I learned a few things working on this application and ran into some occasional 
 
 Some of which include retaining the submitted values when returning to the page after the form has been submitted.  I handled this by using PHP to populate the values with session variables if they were set.  That way, when the user submits a value to the form, the value is stored in a session variable, which is then assigned to the inputs.
 
-Another challenge I encountered was indicating the appropriate form errors.  I did this by using a type of error flagging, which involves having a session variable for the error and using an integer value to indicate the type of error that was found.  For example, the error variable is initially set to 0, meaning no error, and if the form is submitted without a value in the subtotal textbox, error is set to -1.  Now, when we return to the page, the value of error is checked, and the appropriate responses are performed. 
+Another challenge I encountered was indicating the appropriate form errors.  I did this by using a type of error flagging, which involves having a session variable for the error and using an integer value to indicate the type of error that was found.  For example, the error variable is initially set to 0, meaning no error, and if the form is submitted without a value in the subtotal textbox, the value 1 is appended to the error variable.  Now, when we return to the page, the value of error is checked, and the appropriate responses are performed. 
 
 ## License
 
