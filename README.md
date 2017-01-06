@@ -21,23 +21,22 @@ The following **optional** features are implemented:
 * [x] Add support for custom tip percentage
 * [x] Add support for splitting the tip and total
 
-<!--
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the functionality!
--->
+* [x] Add support for thousands separator to output
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-![video walkthrough](https://github.com/brandonmchin/CodePath/blob/master/tip_calculator_demo.gif "Video Walkthrough")
+![video walkthrough](https://github.com/brandonmchin/CodePath/blob/master/Images/tip_calculator_demo.gif "Video Walkthrough")
 
  <!-- 
  <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
  -->
 
 GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/).
+Background image from Mass Effect concept art.
 
 ## Notes
 

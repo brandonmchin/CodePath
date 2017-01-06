@@ -3,6 +3,7 @@ body {
     background-image: url("Images/background-image.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #main_container {
