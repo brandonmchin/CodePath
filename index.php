@@ -12,7 +12,7 @@
         <div id="main_container">
             <div id="title">Tip Calculator</div>
 
-            <form action = "tip_calculator.php" method = "post">
+            <form action = "tip_calculator.php" method = "post" autocomplete="off">
                 <div id="bill_subtotal_input">Bill subtotal: $ 
                     <input type="text" name="bill_subtotal" 
                         style="background-color: <?php if(strpos($_SESSION['error'], '1')) echo '#ffb6c1'; ?>"
