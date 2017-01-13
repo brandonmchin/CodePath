@@ -1,5 +1,9 @@
 # Project 1 - Globitek CMS
 
+**Globitek CMS** contains a user table which stores the information of all registered users.  PHP is used to process and validate the values submitted by each user through an HTML form.
+
+Submitted by: **Brandon Chin**
+
 Time spent: **4** hours spent in total
 
 ## User Stories
