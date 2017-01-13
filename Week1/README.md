@@ -1,5 +1,9 @@
 # Project 1 - Globitek CMS
 
+**Globitek CMS** contains a user table which stores the information of all registered users. PHP is used to process and validate the values submitted by each user through an HTML form.
+
+Submitted by: **Brandon Chin**
+
 Time spent: **4** hours spent in total
 
 ## User Stories
@@ -45,11 +49,11 @@ The following **required** functionality is completed:
 
 The following advanced user stories are **optional**:
 
-[x] **Bonus 1:** Validate that form values contain only whitelisted characters.
+9. [x] **Bonus 1:** Validate that form values contain only whitelisted characters.
   * first_name, last_name: letters, spaces, symbols: - , . '
   * username: letters, numbers, symbols: _
   * email: letters, numbers, symbols: _ @ .
-[x] **Bonus 2:** Validate the uniqueness of the username.
+10. [x] **Bonus 2:** Validate the uniqueness of the username.
 
 ## Video Walkthrough
 
@@ -58,6 +62,8 @@ Here's a walkthrough of implemented user stories:
 <img src='https://github.com/brandonmchin/CodePath/blob/master/Week1/Images/register_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/).
+
+<img src='https://github.com/brandonmchin/CodePath/blob/master/Week1/Images/screenshot_users_table.png' title='Screenshot' width='' alt='Screenshot' />
 
 ## Notes
 
