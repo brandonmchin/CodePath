@@ -65,8 +65,6 @@ GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenr
 
 <img src='https://github.com/brandonmchin/CodePath/blob/master/Week1/Images/screenshot_users_table.png' title='Screenshot' width='' alt='Screenshot' />
 
-![alt text](https://github.com/brandonmchin/CodePath/blob/master/Week1/Images/screenshot_users_table.png "Screenshot")
-
 ## Notes
 
 Validating the form errors and displaying them appropriately was a bit tricky for me, however, fortunately the starter code provided and the readings in Resources really helped out.  Additionally, I learned about the code organization of web applications and its importance.  Separating public files from private files is very important and being able to call functions and variables from one file to another makes this process much more convinient.  In regards to the bonus user stories, using regular expressions to whitelist the acceptable user inputs was interesting to me.  Finally, validating the uniqueness of a submitted username was also a bit tricky, however, I managed to achieve this through a SQL command execution and prevent writing to the database if the username already exists. 
