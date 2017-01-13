@@ -29,7 +29,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![video walkthrough](https://github.com/brandonmchin/CodePath/blob/master/Images/tip_calculator_demo.gif "Video Walkthrough")
+![video walkthrough](https://github.com/brandonmchin/CodePath/blob/master/Week0/Images/tip_calculator_demo.gif "Video Walkthrough")
 
  <!-- 
  <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
