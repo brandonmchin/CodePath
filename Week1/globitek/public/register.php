@@ -27,7 +27,7 @@
       if(!has_length($first_name, ["min"=>2, "max"=>255]))
         $errors[] = "First name must be between 2 and 255 characters.";
       else if(!preg_match('/\A[A-Za-z\s\-,\.\']+\Z/', $first_name))
-        $errors[] = "First name must contain letters, spaces, dashes (-), commas (,), periods (.), or single-quotes (')";
+        $errors[] = "First name must contain letters, spaces, dashes (-), commas (,), periods (.), or single-quotes (').";
     }
 
     // Last Name
@@ -39,7 +39,7 @@
       if(!has_length($last_name, ["min"=>2, "max"=>255]))
         $errors[] = "Last name must be between 2 and 255 characters.";
       else if(!preg_match('/\A[A-Za-z\s\-,\.\']+\Z/', $last_name))
-        $errors[] = "Last name must contain letters, spaces, dashes (-), commas (,), periods (.), or single-quotes (')";
+        $errors[] = "Last name must contain letters, spaces, dashes (-), commas (,), periods (.), or single-quotes (').";
     }
 
     // Email
@@ -53,7 +53,7 @@
       else if(!has_valid_email_format($email))
         $errors[] = "Email must have valid format.";
       else if(!preg_match('/\A[A-Za-z0-9\_\@\.]+\Z/', $email))
-        $errors[] = "Email must contain letters, numbers, underscore (_), period (.), or symbol (@)";
+        $errors[] = "Email must contain letters, numbers, underscore (_), period (.), or symbol (@).";
     }
 
     // Username
@@ -67,7 +67,7 @@
       else if(!has_length($username, ["min"=>8]))
         $errors[] = "Username must have at least 8 characters.";
       else if(!preg_match('/\A[A-Za-z0-9\_]+\Z/', $username))
-        $errors[] = "Username must contain letters, numbers, or underscore (_)";
+        $errors[] = "Username must contain letters, numbers, or underscore (_).";
     }
 
     // if there were no errors, submit data to database
