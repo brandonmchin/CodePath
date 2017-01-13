@@ -61,9 +61,9 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/brandonmchin/CodePath/blob/master/Week1/Images/register_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/).
-
 <img src='https://github.com/brandonmchin/CodePath/blob/master/Week1/Images/screenshot_users_table.png' title='Screenshot' width='' alt='Screenshot' />
+
+GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/).
 
 ## Notes
 
