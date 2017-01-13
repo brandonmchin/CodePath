@@ -45,11 +45,11 @@ The following **required** functionality is completed:
 
 The following advanced user stories are **optional**:
 
-[x] **Bonus 1:** Validate that form values contain only whitelisted characters.
+9. [x] **Bonus 1:** Validate that form values contain only whitelisted characters.
   * first_name, last_name: letters, spaces, symbols: - , . '
   * username: letters, numbers, symbols: _
   * email: letters, numbers, symbols: _ @ .
-[x] **Bonus 2:** Validate the uniqueness of the username.
+10. [x] **Bonus 2:** Validate the uniqueness of the username.
 
 ## Video Walkthrough
 
