@@ -140,7 +140,7 @@ CREATE TABLE `users` (
   `last_name` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
+  `created_at` timestamp DEFAULT current_timestamp,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
