@@ -1,7 +1,7 @@
 <?php
 require_once('../../../private/initialize.php');
 
-if(!isset($_GET['id'])) {
+if(!isset($_GET['id']) || (is_blank($_GET['id']))) {
   redirect_to('index.php');
 }
 $users_result = find_user_by_id($_GET['id']);
@@ -14,10 +14,10 @@ $errors = array();
 if(is_post_request()) {
 
   // Confirm that values are present before accessing them.
-  if(isset($_POST['first_name'])) { $user['first_name'] = $_POST['first_name']; }
-  if(isset($_POST['last_name'])) { $user['last_name'] = $_POST['last_name']; }
-  if(isset($_POST['username'])) { $user['username'] = $_POST['username']; }
-  if(isset($_POST['email'])) { $user['email'] = $_POST['email']; }
+  if(isset($_POST['first_name'])) { $user['first_name'] = htmlspecialchars($_POST['first_name']); }
+  if(isset($_POST['last_name'])) { $user['last_name'] = htmlspecialchars($_POST['last_name']); }
+  if(isset($_POST['username'])) { $user['username'] = htmlspecialchars($_POST['username']); }
+  if(isset($_POST['email'])) { $user['email'] = htmlspecialchars($_POST['email']); }
 
 
   $result = update_user($user);
@@ -38,7 +38,7 @@ if(is_post_request()) {
 
   <?php echo display_errors($errors); ?>
 
-  <form action="edit.php?id=<?php echo $user['id']; ?>" method="post">
+  <form action="edit.php?id=<?php echo $user['id']; ?>" method="post" autocomplete="off">
     First name:<br />
     <input type="text" name="first_name" value="<?php echo $user['first_name']; ?>" /><br />
     Last name:<br />
