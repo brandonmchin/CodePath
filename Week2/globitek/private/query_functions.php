@@ -61,8 +61,8 @@
 
     if(is_blank($state['country_id']))
       $errors[] = "Country ID cannot be blank.";
-    elseif(!ctype_digit($state['country_id']))                  // My custom validation
-      $errors[] = "Country ID must be an integer.";
+    elseif(!ctype_digit($state['country_id']) || $state['country_id'] <= 0)   // My custom validation
+      $errors[] = "Country ID must be a positive integer.";
 
     return $errors;
   }
@@ -168,8 +168,8 @@
 
     if(is_blank($territory['state_id']))
       $errors[] = "State ID cannot be blank.";
-    elseif(!ctype_digit($territory['state_id']))        // My custom validation
-      $errors[] = "State ID must be an integer.";
+    elseif(!ctype_digit($territory['state_id']) || $territory['state_id'] <= 0)        // My custom validation
+      $errors[] = "State ID must be a positive integer.";
 
     if(is_blank($territory['position']))
       $errors[] = "Position cannot be blank.";
@@ -414,15 +414,17 @@
       $errors[] = "Username cannot be blank.";
     } elseif (!has_length($user['username'], array('max' => 255))) {
       $errors[] = "Username must be less than 255 characters.";
-    } else if(!has_valid_username_format($user['username'])) {
+    } elseif(!has_valid_username_format($user['username'])) {
       $errors[] = "Username must contain letters, numbers, or underscores (_).";
-    }
+    } elseif (!has_uniq_username($user)) {
+      $errors[] = "Username already exists.";
+    }    
 
     if (is_blank($user['email'])) {
       $errors[] = "Email cannot be blank.";
     } elseif (!has_valid_email_format($user['email'])) {
       $errors[] = "Email must be a valid format.";
-    }
+    } 
 
     return $errors;
   }
@@ -483,6 +485,26 @@
       return true;
     } else {
       // The SQL UPDATE statement failed.
+      // Just show the error, not the form
+      echo db_error($db);
+      db_close($db);
+      exit;
+    }
+  }
+
+  // Delete a user record
+  function delete_user($user) {
+    global $db;
+
+    $sql = "DELETE FROM users ";
+    $sql .= "WHERE id = '" . $user['id'] . "' ";
+    $sql .= "LIMIT 1;";
+
+    $user_result = db_query($db, $sql);
+    if($user_result) {
+      return true;
+    } else {
+      // The SQL DELETE statement failed
       // Just show the error, not the form
       echo db_error($db);
       db_close($db);

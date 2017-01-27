@@ -27,6 +27,24 @@
       return false;
   }
 
+  // check username uniqueness
+  function has_uniq_username($user) {
+    global $db;
+    $username = db_escape($db, $user['username']);    // Sanitize
+    $sql = "SELECT * FROM users ";
+    $sql .= "WHERE username = '" . $username . "' ";
+    if(isset($user['id'])) {    // check for update_user()
+      $sql .= "AND id <> '" . $user['id'] . "' ";
+    }
+    $sql .= "LIMIT 1;";
+    $users_result = db_query($db, $sql);
+    if($users_result != false && mysqli_num_rows($users_result) > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   // contains only numbers, spaces, dashes, parenthesis
   function has_valid_phone_format($value) {
     if(preg_match("/^([0-9]{3}|\([0-9]{3}\))(-|\s*)[0-9]{3}(-|\s*)[0-9]{4}$/", $value))
