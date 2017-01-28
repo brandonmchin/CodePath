@@ -118,11 +118,11 @@ The following **required** functionality is completed:
     * [x] Validate that phone numbers contain only the whitelisted characters: 0-9, spaces, and ()-.
     * [x] Validate that email addresses contain only whitelisted characters: A-Z, a-z, 0-9, and @._-.
     * [x] Add at least 5 other validations of your choosing:
-        1. State ID must be a positive integer.
-        2. Country ID must be a positive integer.
-        3. Position must be an integer.
-        4. State codes must be exactly 2 characters long.
-        5. State codes must contain only the whitelisted characters: A-Z, a-z
+        * 1. State ID must be a positive integer.
+        * 2. Country ID must be a positive integer.
+        * 3. Position must be an integer.
+        * 4. State codes must be exactly 2 characters long.
+        * 5. State codes must contain only the whitelisted characters: A-Z, a-z
             * State codes are then automatically converted to upper case after all other validations have passed when either creating or updating.
 8. [x] Sanitization:
     * [x] All input and dynamic output should be sanitized.
@@ -147,7 +147,7 @@ The following advanced user stories are **optional**:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' alt='Video Walkthrough' />
+<img src='https://github.com/brandonmchin/CodePath/blob/master/Week2/Images/globitek_week2_demo.gif' title='Video Walkthrough' alt='Video Walkthrough' />
 
 GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/).
 
