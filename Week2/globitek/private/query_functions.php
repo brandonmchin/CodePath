@@ -78,7 +78,7 @@
     }
 
     $sql = "INSERT INTO states ";
-    $sql .= "(name, code) ";
+    $sql .= "(name, code, country_id) ";
     $sql .= "VALUES (";
     $sql .= "'" . $state['name'] . "',";
     $sql .= "'" . strtoupper($state['code']) .  "',";
