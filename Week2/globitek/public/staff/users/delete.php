@@ -23,11 +23,11 @@ if(is_post_request()) {
 <div id="main-content">
   <a href="index.php">Back to Users List</a><br />
 
-  <h1>Delete User: <?php echo $user['first_name'] . " " . $user['last_name']; ?></h1>
+  <h1>Delete User: <?php echo htmlspecialchars($user['first_name']) . " " . htmlspecialchars($user['last_name']); ?></h1>
 
   <p>Are you sure you want to permanently delete this user?</p>
 
-  <form action="delete.php?id=<?php echo $user['id']; ?>" method="post">
+  <form action="delete.php?id=<?php echo htmlspecialchars(urlencode($user['id'])); ?>" method="post">
     <input type="submit" name="submit" value="Delete"  />
   </form>
 

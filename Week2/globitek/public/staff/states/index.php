@@ -23,13 +23,13 @@
     echo "</tr>";
     while($state = db_fetch_assoc($state_result)) {
       echo "<tr>";
-      echo "<td>" . $state['name'] . "</td>";
-      echo "<td>" . $state['code'] . "</td>";
+      echo "<td>" . htmlspecialchars($state['name']) . "</td>";
+      echo "<td>" . htmlspecialchars($state['code']) . "</td>";
       echo "<td>";
-      echo "<a href=\"show.php?id=" . $state['id'] . "\">Show</a>";
+      echo "<a href=\"show.php?id=" . htmlspecialchars(urlencode($state['id'])) . "\">Show</a>";
       echo "</td>";
       echo "<td>";
-      echo "<a href=\"edit.php?id=" . $state['id'] . "\">Edit</a>";
+      echo "<a href=\"edit.php?id=" . htmlspecialchars(urlencode($state['id'])) . "\">Edit</a>";
       echo "</td>";
       echo "</tr>";
     } // end while $states

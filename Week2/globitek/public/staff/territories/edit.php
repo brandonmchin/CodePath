@@ -15,8 +15,8 @@ $errors = array();
 if(is_post_request())
 {
 	// Confirm that values are present before accessing them
-	if(isset($_POST['name'])) {$territory['name'] = htmlspecialchars($_POST['name']);}
-	if(isset($_POST['position'])) {$territory['position'] = htmlspecialchars($_POST['position']);}
+	if(isset($_POST['name'])) {$territory['name'] = $_POST['name'];}
+	if(isset($_POST['position'])) {$territory['position'] = $_POST['position'];}
 
 	$result = update_territory($territory);
 	if($result === true)
@@ -29,17 +29,17 @@ if(is_post_request())
 <?php include(SHARED_PATH . '/header.php'); ?>
 
 <div id="main-content">
-  <a href="../states/show.php?id=<?php echo $state_id; ?>">Back to State Details</a><br />
+  <a href="../states/show.php?id=<?php echo htmlspecialchars(urlencode($state_id)); ?>">Back to State Details</a><br />
 
-  <h1>Edit Territory: <?php echo $territory['name']; ?></h1>
+  <h1>Edit Territory: <?php echo htmlspecialchars($territory['name']); ?></h1>
 
   <?php echo display_errors($errors); ?>
 
-  <form action="edit.php?id=<?php echo $territory['id']; ?>" method="post" autocomplete="off">
+  <form action="edit.php?id=<?php echo htmlspecialchars(urlencode($territory['id'])); ?>" method="post" autocomplete="off">
   	Name:<br />
-  	<input type="text" name="name" value="<?php echo $territory['name']; ?>" /><br />
+  	<input type="text" name="name" value="<?php echo htmlspecialchars($territory['name']); ?>" /><br />
   	Position:<br />
-  	<input type="text" name="position" value="<?php echo $territory['position']; ?>" /><br />
+  	<input type="text" name="position" value="<?php echo htmlspecialchars($territory['position']); ?>" /><br />
   	<br />
   	<input type="submit" name="submit" value="Update" />
   </form>

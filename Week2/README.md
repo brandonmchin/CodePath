@@ -2,7 +2,7 @@
 
 **Globitek CMS** is a content management system for managing database content following the common design pattern referred to as CRUD (create - read - update - delete).  The focus is on taking precautions to sanitize dynamic input and output data.  This is an exercise in the implemention of certain penetration defenses against attacks such as SQL injections (SQLI) and cross-site scripting (XSS).
 
-Time spent: **14** hours spent in total
+Time spent: **15** hours spent in total
 
 ## User Stories
 
@@ -140,8 +140,8 @@ The following advanced user stories are **optional**:
 10. [x] **Bonus:** On "public/staff/territories/show.php", instead of displaying an integer value for territories.state_id, display the name of the state.
 11. [x] **Bonus:** Validate the uniqueness of users.username, both when a user is created and when a user is updated.
 12. [x] **Bonus:** Add a page for "public/staff/users/delete.php". Add a link to it from the user details page. The delete page will display the text: "Are you sure you want to permanently delete the user: ". If the user confirms it, delete the user record and redirect back to the users list.
-13. [ ] **Bonus:** Add a Staff CMS for countries. Add pages for "list", "show", "new", and "edit", similar to the pages in the CMS area for states.
-14. [ ] **Advanced:** Nest the CMS for states inside of the Staff CMS for countries. It should be nested in the same way in which territories are nested inside of states.
+13. [x] **Bonus:** Add a Staff CMS for countries. Add pages for "list", "show", "new", and "edit", similar to the pages in the CMS area for states.
+14. [x] **Advanced:** Nest the CMS for states inside of the Staff CMS for countries. It should be nested in the same way in which territories are nested inside of states.
 
 ## Video Walkthrough
 
