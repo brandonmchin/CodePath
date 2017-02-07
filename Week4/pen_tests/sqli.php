@@ -32,17 +32,18 @@ if($tested) {
     <form action="../public/staff/login.php" method="post" name="sqli" target="results">
       <input type="hidden" name="username" value="<?php echo $string; ?>" />
       <input type="hidden" name="password" value="anything" />
-      <input type="submit" name="submit" value="Test SQLI"  />
+      <input type="submit" name="submit" value="Test SQLI"  onclick="updated=true"/>
     </form>
-    <iframe name="results" style="display: none;" onload="if(updated === true) { window.location =
-  'sqli.php?tested=1&start=' + start} ;"></iframe>
+    <iframe 
+      name="results" style="display: none;" onload="if(updated === true) { window.location ='sqli.php?tested=1&start=' + start} ;">  
+    </iframe>
     <br />
     <br />
     <div id="state-code-test">
       <?php echo $msg; ?>
     </div>
     <script>
-      updated = true;
+      // updated = true;
       start = 0;
       document.forms["sqli"].onsubmit = function() {
         start = Math.floor(new Date().getTime()/1000);
