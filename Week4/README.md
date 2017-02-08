@@ -1,6 +1,6 @@
 # Project 4 - Globitek Authentication and Login Throttling
 
-[Description]
+This project is designed to demonstrate implementing defenses against cross-site scripting (XSS) attacks, SQL injection (SQLI), cross-site request forgery (CSRF), session hijacking, and session fixation attacks.
 
 Time spent: **4** hours spent in total
 
@@ -82,6 +82,10 @@ GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenr
 ## Notes
 
 In testing initial vulnerabilities, the CSRF and SQLI attacks consisted of a loop that would prevent the code from completing.  This was fixed by adding an onlick statement in the hidden forms where the variable "updated" is set to true after the form is submitted.  By doing this, the loop was eliminated.
+
+In order to ensure the application is not vulnerable to XSS attacks, I first needed to decode the base64 encoded string inside the xss.php pen testing file.  This allowed me to see that the code was inserting a script into the username field of the login form and obtaining the document's cookie data.  The prevention method I implemented was to sanitize the forms inputs using PHP's htmlspecialchars().  This function encodes the HTML special characters such as those used in script tags.
+
+In order to ensure the application is not vulnerable to SQL injection attacks, I noticed the sqli.php pen testing file inserted an escape key and a SQL statement which always returns true into the username field of the login form.  This time, I needed to sanitize the SQL query which retreives the user by username.  This was achieved with PHP's mysqli_real_escape_string() function, which contains several methods for escaping strings.  Additionally, I could also whitelist and validate user input since the username is expected to have a certain format.
 
 ## License
 
