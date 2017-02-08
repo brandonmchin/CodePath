@@ -1,5 +1,6 @@
 <?php
 require_once('../../private/initialize.php');
+require_login();    // login must be required and valid
 ?>
 
 <?php $page_title = 'Staff: Menu'; ?>

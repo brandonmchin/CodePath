@@ -51,7 +51,7 @@
       <input type="submit" name="submit" value="Test CSRF" onclick="updated=true"/>
     </form>
     <iframe 
-      name="results" style="display: none;" onload="if(updated === true) {window.location = 'csrf.php?tested=1';}">
+      name="results" style="display: none;" onload="if(updated === true) {window.location = 'csrf.php?tested=1'}">
     </iframe>
     <br />
     <br />

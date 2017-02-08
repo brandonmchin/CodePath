@@ -4,9 +4,8 @@
 // attempting page redirects. Or else uncomment the line below.
 ob_start();
 
-// Enable sessions
-// TODO add configurations
-session_start();
+// Enable sessions and configurations
+session_start(["use_only_cookies" => true, "cookie_lifetime" => (60*60*24), "cookie_httponly" => true]);
 
 // Turns off any browser built-in XSS protections
 // LEAVE THIS LINE IN WHILE YOU ARE LEARNING
