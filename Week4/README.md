@@ -1,8 +1,8 @@
 # Project 4 - Globitek Authentication and Login Throttling
 
-This project is designed to demonstrate implementing defenses against cross-site scripting (XSS) attacks, SQL injection (SQLI), cross-site request forgery (CSRF), session hijacking, and session fixation attacks.
+**This project is designed to demonstrate implementing defenses against cross-site scripting (XSS) attacks, SQL injection (SQLI), cross-site request forgery (CSRF), session hijacking, and session fixation attacks.**
 
-Time spent: **4** hours spent in total
+Time spent: **7** hours spent in total
 
 ## User Stories
 
@@ -54,22 +54,22 @@ The following **required** functionality is completed:
 
 The following advanced user stories are **optional**:
 
-10. [ ] Bonus Objective 1: Identify security flaw in Objective #4 (requiring login on staff pages)
-        * [ ] Identify the security principal not being followed.
-        * [ ] Write a short description of how the code could be modified to be more secure.
+10. [x] Bonus Objective 1: Identify security flaw in Objective #4 (requiring login on staff pages)
+        * [x] Identify the security principal not being followed.
+        * [x] Write a short description of how the code could be modified to be more secure.
 
-11. [ ] Bonus Objective 2: Add CSRF protections to all forms in the staff directory
+11. [x] Bonus Objective 2: Add CSRF protections to all forms in the staff directory
 
-12. [ ] Bonus Objective 3: CSRF tokens only valid for 10 minutes.
+12. [x] Bonus Objective 3: CSRF tokens only valid for 10 minutes.
 
-13. [ ] Bonus Objective 4: Sessions are valid only if user-agent string matches previous value.
+13. [x] Bonus Objective 4: Sessions are valid only if user-agent string matches previous value.
 
-14. [ ] Advanced Objective: Set/Get Signed-Encrypted Cookie
-        * [ ] Create "public/set_secret_cookie.php".
-        * [ ] Create "public/get_secret_cookie.php".
-        * [ ] Encrypt and sign cookie before storing.
-        * [ ] Verify cookie is signed correctly or show error message.
-        * [ ] Decrypt cookie.
+14. [x] Advanced Objective: Set/Get Signed-Encrypted Cookie
+        * [x] Create "public/set_secret_cookie.php".
+        * [x] Create "public/get_secret_cookie.php".
+        * [x] Encrypt and sign cookie before storing.
+        * [x] Verify cookie is signed correctly or show error message.
+        * [x] Decrypt cookie.
 
 ## Video Walkthrough
 
@@ -82,6 +82,8 @@ GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenr
 ## Notes
 
 In testing initial vulnerabilities, the CSRF and SQLI attacks consisted of a loop that would prevent the code from completing.  This was fixed by adding an onlick statement in the hidden forms where the variable "updated" is set to true after the form is submitted.  By doing this, the loop was eliminated.
+
+The principle of security through obscurity is applied in the error messages of the login page.  If the username is correct, but the password is incorrect, the page returns an error stating either fields are incorrect and does not give away that the username was actually correct.
 
 In order to ensure the application is not vulnerable to XSS attacks, I first needed to decode the base64 encoded string inside the xss.php pen testing file.  This allowed me to see that the code was inserting a script into the username field of the login form and obtaining the document's cookie data.  The prevention method I implemented was to sanitize the forms inputs using PHP's htmlspecialchars().  This function encodes the HTML special characters such as those used in script tags.
 
