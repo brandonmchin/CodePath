@@ -55,8 +55,8 @@ The following **required** functionality is completed:
 The following advanced user stories are **optional**:
 
 10. [x] Bonus Objective 1: Identify security flaw in Objective #4 (requiring login on staff pages)
-        * [x] Identify the security principal not being followed.
-        * [x] Write a short description of how the code could be modified to be more secure.
+    * [x] Identify the security principal not being followed.
+    * [x] Write a short description of how the code could be modified to be more secure.
 
 11. [x] Bonus Objective 2: Add CSRF protections to all forms in the staff directory
 
@@ -65,11 +65,11 @@ The following advanced user stories are **optional**:
 13. [x] Bonus Objective 4: Sessions are valid only if user-agent string matches previous value.
 
 14. [x] Advanced Objective: Set/Get Signed-Encrypted Cookie
-        * [x] Create "public/set_secret_cookie.php".
-        * [x] Create "public/get_secret_cookie.php".
-        * [x] Encrypt and sign cookie before storing.
-        * [x] Verify cookie is signed correctly or show error message.
-        * [x] Decrypt cookie.
+    * [x] Create "public/set_secret_cookie.php".
+    * [x] Create "public/get_secret_cookie.php".
+    * [x] Encrypt and sign cookie before storing.
+    * [x] Verify cookie is signed correctly or show error message.
+    * [x] Decrypt cookie.
 
 ## Video Walkthrough
 
