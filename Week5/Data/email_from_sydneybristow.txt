@@ -1,0 +1,36 @@
+To: agent99
+From: sydneybristow
+Subject: Encrypted and Signed Message
+Body:
+
+V13zGoKin0/0qDLnOxhJXp5wrcijADcH7LxPRX7OytfrIgVU95oYWFT/bYpCs39b3Wt2mCqTqW8wOrC02UyHyWll6+KcTm0lpLgE+Of4lEYsGQWKZtpOyuejkwu/5+sKzRPeb73i03c/RpHXDhjlTNCfhKwmNEEmSYZjoFLu59NKhOWO7eFVUPWH82RUPEqMrrxEUik844agENr4yhXYoehSqYM/mZpgHoN8dfu+EzTZxpy2j5bBMECfLPVdR9u7OXngSztYqhBy2okuwDBkId4/4TXcUM7ioYTUMki3j3r/JIXNpb5qJtkhCN6fDA2Kowz91R5bR6rkrRRjzxMn5A==
+
+Cannot access APEX from this location. Send new agent codename and public key so I can contact. Encrypt response to protect codename. Include signature to verify identity and message integrity. -- sydneybristow
+
+Signature:
+t6Swk/V4PaCpTkvQRKuYVLh36a/8j7eLVJQHdh9Rkc1iBPPM2LVcu+CkqOvtnGsndnShHhF0zUA1QgW5727dWMZ0LebGveUp8g7TCvnu/XDm3HcHp4BpGi7m+y7kZPzSWN7fsWR/pR28iV9OXnnw0dTP7VXXVaZH5Y8LydZoUPNq36VKLx7d4wGJ1zUEeIqjZi3W8HtzJCt8H2vIXOZjtoYwwtszcEHcNGmnbetbCtAOXgM0fZMrsQkIPQgANJlRV+La60VZsFmK2uvu/hzL1SBmY4miu3rUs2ybjEeploxC/sg2yBjEGpv9pX+kmnyW0pFRdLwaW68bRD7yiLlY5Q==
+
+Valid
+
+
+To: sydneybristow
+From: agent99
+Subject: Encrypted and Signed Message - Response
+Body:
+
+D39lPJaI4rdLdDHAIT1PAvOy4DUElnjXpfGPKx+5Sou6r3q+Pl0S9Ba/pJKH4BNjbi0d4hSi/0oOuUUfxyb+JhmVigBdHdNyxgxNGVoByNeMc+EjmJ86rs1xkbpq7RrQfTJpAD4He1RdzHvSqUeWxbUX8Dn/yYFA7JKznlmau//QjVi9SFwJqImL0o+eV9booNoTGEfnypJ/UUxZa6dthaS2fCunL1puJdANuxnzI/Kwt0C9FHqITPsm7xy1dtiZWd7V6KPUl3p1oBMou8JzkpqayOZFV7+3Wy7q1EipyhlJwypCL5hui9cz6/YOyM21tzjPcT2bIixh+7y44LQwtQ==
+
+codename="johnsteed"
+
+Signature:
+BkilQ+gUcQBs466iHet0EzsRjeQBQ8LnIChl3V7wv8jAztB1A/HohSrgxl0osuqdAIVwMreYVTq5yEPpEkTlWZb3M6UiZ4ioUtwmWWICmt4+MshDVWilmj3Ja4LBZe7V7lSldqKKzWuE2bhnMq4wZhsSG2tcRY6tFkt22ruFN42DkeqGJJL4hgP1QLX99q6D2MLDGpKJdmri9fkVx8UWE5IuGhVSs/y0B4K26SDHZ9qAzOpb/9VRfBWgVKcrZpNbmkCOAVODtwoXVbplPdBja5733lsiOzbrLyzKE+/DKrvp1E5NtNn4nxkTUa9e7XUqILTyTpNnSCJagIicfGMGmA==
+
+----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzCSgn29lGGyjb/Ncm7BG
+fwg/wTGGl+HmrJkRltR1grt2bIJ94PypOFJdUuypnWlzAAwxIGNkG5fDx93L4hof
+jjMoygzUs0g7E2cecHnE7eax/JJKsoPvebMQFqLwomixAPocCMmbm36/9AfxcDih
+Tz1sI6+uqq1VLFSfJST1cmGMZIzgp7SM0KG/orAqmZze1GwoMOS/3nS9EILLNt/T
+9/ypRAtXqJLSULjRjYXBRCjtm2ttp2YgLsr+K5v8tm2dLI4vM0sBa0Vjfp0BtT/s
+2FQA1RuEwkXD222XBjoI3q57LzgmqvvRktteNdAJ0N+jFewbcp02ZB7psuPMIVAE
+AQIDAQAB
+-----END PUBLIC KEY-----
