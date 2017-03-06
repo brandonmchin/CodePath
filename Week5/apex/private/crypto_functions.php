@@ -16,7 +16,6 @@ function get_key_length($cipher_method=CIPHER_METHOD) {
   } else if($cipher_method == "BF-CBC") {
     $key_length = 56;
   }
-  echo $key_length;
   return $key_length;
 }
 
