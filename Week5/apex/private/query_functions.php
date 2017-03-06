@@ -24,7 +24,7 @@
   function find_agent_by_id($id=0) {
     global $db;
     $sql = "SELECT * FROM agents ";
-    $sql .= "WHERE id='" . $id . "';";
+    $sql .= "WHERE id='" . db_escape($db, $id) . "';";
     $result = db_query($db, $sql);
     return $result;
   }

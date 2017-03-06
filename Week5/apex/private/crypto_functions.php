@@ -5,8 +5,25 @@
 // Cipher method to use for symmetric encryption
 const CIPHER_METHOD = 'AES-256-CBC';
 
+function get_key_length($cipher_method=CIPHER_METHOD) {
+  $key_length = 0;
+  if($cipher_method == "AES-256-CBC") {
+    $key_length = 32;
+  } else if($cipher_method == "AES-128-CBC") {
+    $key_length = 16;
+  } else if($cipher_method == "DES-EDE3-CBC") {
+    $key_length = 24;
+  } else if($cipher_method == "BF-CBC") {
+    $key_length = 56;
+  }
+  echo $key_length;
+  return $key_length;
+}
+
 function key_encrypt($string, $key, $cipher_method=CIPHER_METHOD) {
-  $key = str_pad($key, 32, '*');    // appends '*' to make key length 32 (256 bits)
+  $key_length = get_key_length($cipher_method);
+
+  $key = str_pad($key, $key_length, '*');    // appends '*' to make key of specified length
 
   $iv_length = openssl_cipher_iv_length($cipher_method);
   $iv = openssl_random_pseudo_bytes($iv_length);     // create initialization vector
@@ -19,7 +36,9 @@ function key_encrypt($string, $key, $cipher_method=CIPHER_METHOD) {
 }
 
 function key_decrypt($string, $key, $cipher_method=CIPHER_METHOD) {
-  $key = str_pad($key, 32, '*');    // appends '*' to make key length 32 (256 bits)
+  $key_length = get_key_length($cipher_method);
+
+  $key = str_pad($key, $key_length, '*');    // appends '*' to make key of specified length
 
   $iv_with_ciphertext = base64_decode($string);
 
@@ -49,9 +68,6 @@ function generate_keys($config=PUBLIC_KEY_CONFIG) {
 
   $key_details = openssl_pkey_get_details($resource);   // extract public key from the pair
   $public_key = $key_details["key"];
-
-  // $private_key = 'Ha ha!';
-  // $public_key = 'Ho ho!';
 
   return array('private' => $private_key, 'public' => $public_key);
 }
