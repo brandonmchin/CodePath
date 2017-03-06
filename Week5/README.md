@@ -2,7 +2,7 @@
 
 **We will pose as secret agents tasked with repairing broken online encryption tools and identifying the double agent who helped to break them.**
 
-Time spent: *10** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -105,6 +105,8 @@ The following objectives are **optional**:
 
 Here's a walkthrough of implemented user stories:
 Video Walkthrough
+
+<img src='https://github.com/brandonmchin/CodePath/blob/master/Week5/Images/week5_full_demo.gif' title='Full Demo' alt='Full Demo' />
 
 GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/).
 
