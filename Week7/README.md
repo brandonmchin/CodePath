@@ -17,19 +17,31 @@ Time spent: **12** hours spent in total
 
   - [x] Steps to recreate: Create a new page or a post and place the following line in the body:
 
+    ```
     [caption width="1" caption='<a href="' ">]</a><a href="http://onmouseover='alert(1)'">Over here!</a>
+    ```
 
   - [x] Affected source code: [branches/4.1/src/wp-includes/post.php](https://core.trac.wordpress.org/browser/branches/4.1/src/wp-includes/post.php)
 
-2. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+2. (Required) WordPress 2.5-4.6 - Authenticated Stored Cross-Site Scripting via Image Filename
+  - [x] Summary: A stored, or persistent, cross-site scripting (XSS) vulnerability which allows remote attackers to create a specially crafted image file name that will inject arbitrary web script or HTML.  This abuses the insufficient validation of the file names of uploaded images.  For the attack to succeed, an administrator must upload the image, typically requested by a user.
+    - Vulnerability types: Stored cross-site scripting (XSS)
+    - Tested in version: 4.2.2
+    - Fixed in version: 4.6.1
+  - [x] GIF Walkthrough: 
+
+<img src='https://github.com/brandonmchin/CodePath/blob/master/Week7/Images/week7_demo2.gif' title='Demo 2' alt='Demo 2' /> 
+
+  - [x] Steps to recreate: Create a new media post and upload an image with the following filename:
+
+    ```
+    filename<img src=a onerror=alert(1)>.png
+    ```
+
+    When the attachment page is viewed, the injected code is executed.
+
+  - [x] Affected source code: [branches/4.2/src/wp-admin/includes/media.php](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-admin/includes/media.php)
+
 3. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
