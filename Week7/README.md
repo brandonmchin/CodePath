@@ -17,7 +17,9 @@ Time spent: **12** hours spent in total
 
   - [x] Steps to recreate: Create a new page or a post and place the following line in the body:
 
+    ```
     [caption width="1" caption='<a href="' ">]</a><a href="http://onmouseover='alert(1)'">Over here!</a>
+    ```
 
   - [x] Affected source code: [branches/4.1/src/wp-includes/post.php](https://core.trac.wordpress.org/browser/branches/4.1/src/wp-includes/post.php)
 
