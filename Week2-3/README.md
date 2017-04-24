@@ -147,7 +147,7 @@ The following advanced user stories are **optional**:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/brandonmchin/CodePath/blob/master/Week2/Images/week2_demo.gif' title='Video Walkthrough' alt='Video Walkthrough' />
+<img src='https://github.com/brandonmchin/CodePath/blob/master/Week2-3/Images/week2_demo.gif' title='Video Walkthrough' alt='Video Walkthrough' />
 
 GIF created with [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/).
 
